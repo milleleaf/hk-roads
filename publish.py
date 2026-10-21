@@ -15,7 +15,7 @@ _aids = os.path.join(sources.OUT, 'traffic-aids')   # Traffic Aids Drawings: one
 AIDS = sorted(f'traffic-aids/{f}' for f in os.listdir(_aids) if f.endswith('.parquet')) if os.path.isdir(_aids) else []
 DATASET_FILES = [f'{l}.parquet' for l in LAYERS + LANDSD] + AIDS + ['index.json']
 BUCKET_FILES = ['roads.pmtiles', 'landsd-centreline.pmtiles', 'traffic-aids.pmtiles', 'index.json']
-KAGGLE = ('helenkwok/hk-roads', 'AlreadyOpen HK road network')            # mirrored by kaggle_mirror.py (title 6-50 chars)
+KAGGLE = ('helenkwok/hk-roads', 'Milleleaf HK road network')            # mirrored by kaggle_mirror.py (title 6-50 chars)
 
 def main():
     o = lambda f: os.path.join(sources.OUT, f); idx = json.load(open(o('index.json')))
