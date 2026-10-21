@@ -5,9 +5,9 @@ signals, road markings, yellow boxes, crossings, railings; 51 layers, ~580 MB of
 Department's Road Centreline (CSDI, 1:1000; in HK1980 as served and in WGS84, in its own files under CSDI terms), baked weekly
 by GitHub Actions into GeoParquet (one file per layer; the traffic aids in the `traffic-aids/` folder) and PMTiles (`roads.pmtiles`
 z8-16, `traffic-aids.pmtiles` z16-18, `landsd-centreline.pmtiles` z12-16), published to Hugging Face
-([dataset](https://huggingface.co/datasets/alreadyopen/hk-roads), [bucket](https://huggingface.co/buckets/alreadyopen/hk-roads)) and
+([dataset](https://huggingface.co/datasets/milleleaf/hk-roads), [bucket](https://huggingface.co/buckets/milleleaf/hk-roads)) and
 mirrored to [Kaggle](https://www.kaggle.com/datasets/helenkwok/hk-roads). Made from
-[pipeline-template](https://github.com/AlreadyOpen/pipeline-template): see it for the publish gate, checks and lessons.
+[pipeline-template](https://github.com/milleleaf/pipeline-template): see it for the publish gate, checks and lessons.
 
 Run locally (Python 3.13, tippecanoe 2.79.0): `pip install -r requirements.txt && python bake.py`.
 

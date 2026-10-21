@@ -18,7 +18,7 @@ size_categories:
 Hong Kong's road network from the Transport Department's Intelligent Road Network (2nd generation): every layer and every
 field of its file geodatabase; its Traffic Aids Drawings (2nd generation: traffic signs, traffic lights, road markings, yellow
 boxes, crossings, railings, tactile paving, direction and pedestrian signs), every layer and every field; and the Lands Department's Road Centreline (1:1000 topography), for alignment with LandsD's other
-1:1000 data. Rebuilt weekly by [AlreadyOpen/hk-roads](https://github.com/AlreadyOpen/hk-roads).
+1:1000 data. Rebuilt weekly by [AlreadyOpen/hk-roads](https://github.com/milleleaf/hk-roads).
 
 One Parquet file per layer (GeoParquet, `geometry` as WKB in EPSG:4326, every attribute as text exactly as published):
 
@@ -68,7 +68,7 @@ Curved geometries in the source (arcs) are turned into lines. Vector tiles of th
 z8-16, one tile layer per Parquet file name; the traffic aids in `traffic-aids.pmtiles`, z16-18 only (street detail: the densest
 z16-17 tiles are thinned to fit, z18 holds every feature; zoom past 18 to see them larger); the LandsD centreline in its own
 `landsd-centreline.pmtiles`, z12-16) are in the bucket
-[alreadyopen/hk-roads](https://huggingface.co/buckets/alreadyopen/hk-roads).
+[alreadyopen/hk-roads](https://huggingface.co/buckets/milleleaf/hk-roads).
 
 ```python
 import duckdb
