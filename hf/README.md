@@ -68,11 +68,11 @@ Curved geometries in the source (arcs) are turned into lines. Vector tiles of th
 z8-16, one tile layer per Parquet file name; the traffic aids in `traffic-aids.pmtiles`, z16-18 only (street detail: the densest
 z16-17 tiles are thinned to fit, z18 holds every feature; zoom past 18 to see them larger); the LandsD centreline in its own
 `landsd-centreline.pmtiles`, z12-16) are in the bucket
-[alreadyopen/hk-roads](https://huggingface.co/buckets/milleleaf/hk-roads).
+[milleleaf/hk-roads](https://huggingface.co/buckets/milleleaf/hk-roads).
 
 ```python
 import duckdb
-duckdb.sql("""SELECT SPEED_LIMIT, count(*) FROM 'hf://datasets/alreadyopen/hk-roads/speed_limit.parquet' GROUP BY 1 ORDER BY 2 DESC""")
+duckdb.sql("""SELECT SPEED_LIMIT, count(*) FROM 'hf://datasets/milleleaf/hk-roads/speed_limit.parquet' GROUP BY 1 ORDER BY 2 DESC""")
 ```
 
 A copy is mirrored to [Kaggle](https://www.kaggle.com/datasets/helenkwok/hk-roads) after every bake.
